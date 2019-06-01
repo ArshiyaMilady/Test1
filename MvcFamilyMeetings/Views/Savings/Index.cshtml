@@ -1,0 +1,120 @@
+﻿@model IEnumerable<MvcFamilyMeetings.Models.Saving>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <br />
+        <br />
+        @if (ViewData["DED"].ToString().Equals("SHOW"))
+        {
+            <form asp-action="Index" dir="ltr">
+                <div class="form-group">
+                    <p>
+                        <input type="text" name="member_id" style="width:100px" dir="auto">
+                        <label class="control-label"> شناسه </label>
+                    </p>
+                    <p>
+                        <input type="text" name="FName" style="width:100px" dir="auto">
+                        <label class="control-label"> نام </label>
+                    </p>
+                    <p>
+                        <input type="text" name="LName" style="width:100px" dir="auto">
+                        <label class="control-label"> نام خانوادگی </label>
+                    </p>
+                    <p>
+                        <input type="submit" value="جستجو"
+                               style="color: white; background-color:blue;" />
+                    </p>
+                    <p> @ViewData["Data"].ToString() : تعداد موارد یافت شده</p>
+                </div>
+            </form>
+        }
+    </div>
+    <div class="col-md-4">
+    </div>
+
+    <div class="col-md-4">
+        <h4 dir="rtl" style="color:darkred">@ViewData["Member_Name"].ToString()</h4>
+        <h2 dir="rtl">پس انداز</h2>
+        <p dir="rtl">موجودی : @ViewData["Cash"] ریال</p>
+
+        @if (ViewData["DED"].ToString().Equals("SHOW"))
+        {
+            <p dir="rtl">
+                <a asp-action="Create">اضافه کردن مورد جدید</a>
+            </p>
+        }
+    </div>
+</div>
+
+<table class="table" dir="rtl">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Member_Id)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payment)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.S_C1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.S_C2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.S_I1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.S_I2)
+                </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Member_Id)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Payment)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.S_C1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.S_C2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.S_I1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.S_I2)
+                    </td>*@
+                @if (ViewData["DED"].ToString().Equals("SHOW"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<style type="text/css">
+    .table th, .table td {
+        text-align: center;
+    }
+</style>

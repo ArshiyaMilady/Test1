@@ -1,0 +1,111 @@
+﻿@model IEnumerable<MvcFamilyMeetings.Models.Meeting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row"></div>
+<div class="col-md-4">
+    <br/>
+    <p>@ViewData["Next_Meeting"].ToString()</p>
+</div>
+<div class="col-md-4"></div>
+<div class="col-md-4">
+    <h4 dir="rtl">@ViewData["Member_Name"].ToString()</h4>
+    <h2 dir="rtl">جلسات تشکیل شده</h2>
+
+    @if (ViewData["DED"].ToString().Equals("SHOW"))
+    {
+        <p dir="rtl">
+            <a asp-action="Create1">اضافه کردن</a>
+        </p>
+    }
+</div>
+
+
+<table class="table" dir="rtl">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Member_Id)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Member_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Login_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+
+            @*
+        <th>
+            @Html.DisplayNameFor(model => model.Mt_C1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mt_C2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mt_I1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mt_I2)
+        </th>
+            *@
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Member_Id)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Member_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Login_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Comment)
+                </td>
+
+                @*
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mt_C1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mt_C2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mt_I1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mt_I2)
+                </td>
+                *@
+
+                @if (ViewData["DED"].ToString().Equals("SHOW"))
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">ویرایش</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">جزئیات</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">حذف</a>
+                    </td>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>
+<style type="text/css">
+    .table th, .table td {
+        direction: rtl;
+        text-align: center;
+    }
+</style>

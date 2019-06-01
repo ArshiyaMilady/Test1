@@ -1,0 +1,98 @@
+﻿@model MvcFamilyMeetings.Models.Meeting
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2 dir="rtl">اضافه کردن مورد جدید</h2>
+
+<h4 dir="rtl">جلسه</h4>
+<hr />
+
+<style type="text/css">
+    .inputClass {
+        font-weight: bold;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-5">
+        <form asp-action="Create1" dir="rtl">
+            <div class="form-group">
+                <label asp-for="Mt_C1" class="control-label"></label>
+                <input asp-for="Mt_C1" class="form-control" />
+                <span asp-validation-for="Mt_C1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mt_C2" class="control-label"></label>
+                <input asp-for="Mt_C2" class="form-control" />
+                <span asp-validation-for="Mt_C2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mt_I1" class="control-label"></label>
+                <input asp-for="Mt_I1" class="form-control" value="0" />
+                <span asp-validation-for="Mt_I1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mt_I2" class="control-label"></label>
+                <input asp-for="Mt_I2" class="form-control" value="0" />
+                <span asp-validation-for="Mt_I2" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
+        <form asp-action="Create1" dir="rtl">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Member_Id" class="control-label"></label>
+                <input asp-for="Member_Id" class="form-control" />
+                <span asp-validation-for="Member_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Login_Date" class="control-label"></label>
+                <input asp-for="Login_Date" class="form-control" />
+                <span asp-validation-for="Login_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            @*
+        <div class="form-group">
+            <label asp-for="Mt_C1" class="control-label"></label>
+            <input asp-for="Mt_C1" class="form-control" />
+            <span asp-validation-for="Mt_C1" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Mt_C2" class="control-label"></label>
+            <input asp-for="Mt_C2" class="form-control" />
+            <span asp-validation-for="Mt_C2" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Mt_I1" class="control-label"></label>
+            <input asp-for="Mt_I1" class="form-control" value="0" />
+            <span asp-validation-for="Mt_I1" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Mt_I2" class="control-label"></label>
+            <input asp-for="Mt_I2" class="form-control" value="0" />
+            <span asp-validation-for="Mt_I2" class="text-danger"></span>
+        </div>
+            *@
+
+            <div class="form-group">
+                <input type="submit" value="ثبت" class="btn btn-default" style="font-family: sans-serif; font-size: 25px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+    <div dir="rtl">
+        <a asp-action="Index" >بازگشت</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

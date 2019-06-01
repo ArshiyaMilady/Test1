@@ -1,0 +1,97 @@
+﻿@model MvcFamilyMeetings.Models.Loan
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2 dir="rtl">حذف</h2>
+
+<h3 dir="rtl">آیا حذف این مورد اطمینان دارید؟</h3>
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+
+        <div dir="rtl">
+            <h4>قسط</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt dir="rtl">
+                    @Html.DisplayNameFor(model => model.Member_Id)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Member_Id)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Payment)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Payment)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Date)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Date)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Remaining)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Remaining)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Loan_Amount)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Loan_Amount)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Loan_Date)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Loan_Date)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Comment)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Comment)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.I_C1)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.I_C1)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.I_C2)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.I_C2)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.I_I1)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.I_I1)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.I_I2)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.I_I2)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="حذف" class="btn btn-default" /> |
+                <a asp-action="Index">بازگشت</a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,238 @@
+﻿@*@if (ViewData["member_Id"] == null)
+{
+    <meta http-equiv="refresh" content="0; url=../Login/Index" />
+}
+
+<h3>  @ViewData["member_Id"] </h3>*@
+
+
+@model IEnumerable<MvcFamilyMeetings.Models.Member>
+
+
+@*@{
+    ViewData["Title"] =  "Index";
+}*@
+
+@*<h2 dir="rtl">@ViewData["member_Name"]</h2>*@
+<h2 dir="rtl">اعضاء</h2>
+
+<p dir="rtl">
+    <a asp-action="Create">اضافه کردن</a>
+</p>
+<table class="table" dir="rtl">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meeting_Turn)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numbers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone_Home)
+            </th>
+
+            @*
+        <th>
+            @Html.DisplayNameFor(model => model.Address_Home)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address_Work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone_Work)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_Mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Login_Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Login_Password_Hint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Enter_Meetings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Exit_Meetings)
+        </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            *@
+
+            <th>
+                @Html.DisplayNameFor(model => model.Saving_Cash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Loan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Loan_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Loan_Remainig)
+            </th>
+
+            @*
+        <th>
+            @Html.DisplayNameFor(model => model.M_C1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M_C2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M_C3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M_C4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M_I1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M_I2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M_I3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.M_I4)
+        </th>
+            *@
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)//.Where(d=>d.Id<10).ToList())
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meeting_Turn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numbers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile_No)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone_Home)
+            </td>
+            @*
+
+              <td>
+                 @Html.DisplayFor(modelItem => item.Address_Home)
+             </td>
+        <td>
+             @Html.DisplayFor(modelItem => item.Address_Work)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.Phone_Work)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.E_Mail)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.LoginName)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.Login_Password)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.Login_Password_Hint)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.Date_Enter_Meetings)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.Date_Exit_Meetings)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.Level)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.Comment)
+         </td>
+            *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Saving_Cash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Loan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Loan_Date)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.Last_Loan_Remainig)
+            </th>
+            @*
+            <td>
+                @Html.DisplayFor(modelItem => item.M_C1)
+            </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M_C2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M_C3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M_C4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M_I1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M_I2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M_I3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.M_I4)
+        </td>
+            *@
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+@*  عنوان ستونهای جدول به مرکز قسمت خود انتقال می دهد*@
+<style type="text/css">
+    .table th, .table td {
+        direction: rtl;
+        text-align: center;
+    }
+</style>

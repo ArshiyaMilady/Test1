@@ -1,0 +1,89 @@
+﻿@model MvcFamilyMeetings.Models.Loan
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@if (!ViewData["Error_Msg"].ToString().Equals("OK"))
+{
+    @Html.Raw(ViewData["Error_Msg"])
+}
+
+
+<h2>Create</h2>
+
+<h4>Loan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Member_Id" class="control-label"></label>
+                <input asp-for="Member_Id" class="form-control" />
+                <span asp-validation-for="Member_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Payment" class="control-label"></label>
+                <input asp-for="Payment" class="form-control" />
+                <span asp-validation-for="Payment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden="hidden">
+                <label asp-for="Remaining" class="control-label"></label>
+                <input asp-for="Remaining" class="form-control" value="0"/>
+                <span asp-validation-for="Remaining" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden="hidden">
+                <label asp-for="Loan_Amount" class="control-label"></label>
+                <input asp-for="Loan_Amount" class="form-control" value="0" />
+                <span asp-validation-for="Loan_Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden="hidden">
+                <label asp-for="Loan_Date" class="control-label"></label>
+                <input asp-for="Loan_Date" class="form-control" />
+                <span asp-validation-for="Loan_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="I_C1" class="control-label"></label>
+                <input asp-for="I_C1" class="form-control" />
+                <span asp-validation-for="I_C1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="I_C2" class="control-label"></label>
+                <input asp-for="I_C2" class="form-control" />
+                <span asp-validation-for="I_C2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="I_I1" class="control-label"></label>
+                <input asp-for="I_I1" class="form-control" value="0" />
+                <span asp-validation-for="I_I1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="I_I2" class="control-label"></label>
+                <input asp-for="I_I2" class="form-control" value="0" />
+                <span asp-validation-for="I_I2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="ثبت" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

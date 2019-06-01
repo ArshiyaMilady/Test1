@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<h4 dir="rtl">@ViewData["Member_Name"].ToString()</h4>
+<h2 dir="rtl">صفحه اصلی</h2>
+<br />
+
+<p dir="rtl" style="font-size:larger">
+    @*<a asp-area="" asp-controller="Meetings" asp-action="Index"
+           style="color:darkblue; font-size:x-large">
+            جلسات
+        </a>*@
+
+    <button dir="rtl" style="color:darkblue; font-size:larger"
+            onclick="location.href='@Url.Action("Index", "Savings")'">
+        مشاهده وضعیت پس انداز و پرداخت ها
+    </button>
+    <br/>
+    <button dir="rtl" style="color:darkred; font-size:larger"
+            onclick="location.href='@Url.Action("Index", "Loans")'">
+        مشاهده وضعیت وام و اقساط پرداخت شده
+    </button>
+</p>
+
+
+
+<style>
+    button {
+        margin: 25px 5px 20px 20px;
+        border-radius: 15px;
+    }
+</style>

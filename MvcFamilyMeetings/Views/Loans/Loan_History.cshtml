@@ -1,0 +1,107 @@
+﻿@model IEnumerable<MvcFamilyMeetings.Models.Loan>
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+
+<h4 dir="rtl">@ViewData["Member_Name"].ToString()</h4>
+<h2 dir="rtl">لیست وامهای دریافت شده</h2>
+
+<div class="row">
+    <div class="col-md-7"></div>
+    <div class="col-md-5">
+
+        <table class="table" dir="rtl">
+            <thead>
+                <tr>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.Member_Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Payment)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Date)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Remaining)
+                        </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.Loan_Amount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Loan_Date)
+                    </th>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.Comment)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.I_C1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.I_C2)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.I_I1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.I_I2)
+                        </th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.Member_Id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Payment)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Remaining)
+                            </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Loan_Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Loan_Date)
+                        </td>
+                        @*<td>
+                                @Html.DisplayFor(modelItem => item.Comment)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.I_C1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.I_C2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.I_I1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.I_I2)
+                            </td>*@
+                        @*<td>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>*@
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+        <style type="text/css">
+            .table th, .table td {
+                text-align: center;
+            }
+        </style>
+
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@model MvcFamilyMeetings.Models.Meeting
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meeting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Member_Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member_Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Login_Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Login_Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mt_C1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mt_C1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mt_C2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mt_C2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mt_I1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mt_I1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mt_I2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mt_I2)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

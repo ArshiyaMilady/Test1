@@ -1,0 +1,189 @@
+﻿@model MvcFamilyMeetings.Models.Member
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Meeting_Turn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Meeting_Turn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Numbers)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Numbers)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address_Home)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address_Home)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile_No)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mobile_No)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone_Home)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone_Home)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address_Work)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address_Work)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone_Work)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone_Work)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.E_Mail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.E_Mail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Login_Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Login_Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Login_Password_Hint)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Login_Password_Hint)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Enter_Meetings)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date_Enter_Meetings)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Exit_Meetings)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date_Exit_Meetings)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Comment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Saving_Cash)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Saving_Cash)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Last_Loan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Last_Loan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Last_Loan_Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Last_Loan_Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M_C1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M_C1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M_C2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M_C2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M_C3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M_C3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M_C4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M_C4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M_I1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M_I1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M_I2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M_I2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M_I3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M_I3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M_I4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M_I4)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

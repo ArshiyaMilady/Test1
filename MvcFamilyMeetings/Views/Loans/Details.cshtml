@@ -1,0 +1,88 @@
+﻿@model MvcFamilyMeetings.Models.Loan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h2 dir="rtl">جزئیات</h2>
+        <div>
+            <h4 dir="rtl">اقساط پرداخت شده</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Member_Id)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Member_Id)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Payment)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Payment)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Date)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Date)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Remaining)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Remaining)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Loan_Amount)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Loan_Amount)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Loan_Date)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Loan_Date)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Comment)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Comment)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.I_C1)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.I_C1)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.I_C2)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.I_C2)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.I_I1)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.I_I1)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.I_I2)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.I_I2)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id">ویرایش</a> |
+            <a asp-action="Index">بازگشت</a>
+        </div>
+    </div>
+</div>
